@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="caCatissueESB" xmlns:ns2="http://enterprise.netbeans.org/bpel/bpCatissueESB/bpProtocols" xmlns:ns3="http://enterprise.netbeans.org/bpel/bpCatissueESB/bpParticipants" xmlns:ns4="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Protocols" xmlns:ns5="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Participants" version="1.0">
+    <services binding-component="true">
+        <consumes endpoint-name="casaPort2" interface-name="ns4:ProtocolsPortType" service-name="ns1:caCatissueESBService2"/>
+        <consumes endpoint-name="casaPort1" interface-name="ns5:ParticipantsPortType" service-name="ns1:caCatissueESBService1"/>
+    </services>
+</jbi>
