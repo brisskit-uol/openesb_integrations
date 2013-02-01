@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Participants" targetNamespace="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Participants"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Participants" xmlns:ns="http://xml.netbeans.org/schema/catissue_add_participant_req" xmlns:ns0="http://xml.netbeans.org/schema/catissue_add_participant_resp" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+    <types>
+        <xsd:schema targetNamespace="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Participants">
+            <xsd:import namespace="http://xml.netbeans.org/schema/catissue_add_participant_req" schemaLocation="catissue_add_participant_req.xsd"/>
+            <xsd:import namespace="http://xml.netbeans.org/schema/catissue_add_participant_resp" schemaLocation="catissue_add_participant_resp.xsd"/>
+        </xsd:schema>
+    </types>
+    <message name="SetParticipantsRequest">
+        <part name="participantsReq" element="ns:patients"/>
+    </message>
+    <message name="SetParticipantsResponse">
+        <part name="participantsResp" element="ns0:results"/>
+    </message>
+    <portType name="ParticipantsPortType">
+        <operation name="SetParticipants">
+            <input name="input1" message="tns:SetParticipantsRequest"/>
+            <output name="output1" message="tns:SetParticipantsResponse"/>
+        </operation>
+    </portType>
+    <plnk:partnerLinkType name="Participants">
+        <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
+In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
+A partner link type characterizes the conversational relationship between two services. The partner link type can have one or two roles.-->
+        <plnk:role name="ParticipantsPortTypeRole" portType="tns:ParticipantsPortType"/>
+    </plnk:partnerLinkType>
+</definitions>
+

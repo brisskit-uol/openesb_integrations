@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="bpProtocols"
+    targetNamespace="http://enterprise.netbeans.org/bpel/bpCatissueESB/bpProtocols"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/bpCatissueESB/bpProtocols"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="java://connector.Protocols" xmlns:ns1="java://java.lang.Object">
+    <import namespace="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Protocols" location="Protocols.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="plProtocol" xmlns:tns="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Protocols" partnerLinkType="tns:Protocols" myRole="ProtocolsPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="GetProtocolsOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Protocols" messageType="tns:GetProtocolsResponse"/>
+        <variable name="GetProtocolsIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Protocols" messageType="tns:GetProtocolsRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="plProtocol" operation="GetProtocols" xmlns:tns="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Protocols" portType="tns:ProtocolsPortType" variable="GetProtocolsIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from>ns0:getCPs()</from>
+                <to variable="GetProtocolsOut" part="protocolsResp"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="plProtocol" operation="GetProtocols" xmlns:tns="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Protocols" portType="tns:ProtocolsPortType" variable="GetProtocolsOut"/>
+    </sequence>
+</process>
+
+
