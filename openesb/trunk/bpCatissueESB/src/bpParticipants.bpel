@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process
+    name="bpParticipants"
+    targetNamespace="http://enterprise.netbeans.org/bpel/bpCatissueESB/bpParticipants"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/bpCatissueESB/bpParticipants"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:sxed2="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" xmlns:ns0="java://connector.Participant" xmlns:ns1="http://xml.netbeans.org/schema/catissue_add_participant_resp" xmlns:ns2="http://xml.netbeans.org/schema/catissue_add_participant_req">
+    <import namespace="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Participants" location="Participants.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="plParticipant" xmlns:tns="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Participants" partnerLinkType="tns:Participants" myRole="ParticipantsPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="SetParticipantsOut" xmlns:tns="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Participants" messageType="tns:SetParticipantsResponse"/>
+        <variable name="SetParticipantsIn" xmlns:tns="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Participants" messageType="tns:SetParticipantsRequest"/>
+    </variables>
+    <sequence>
+        <receive name="Receive1" createInstance="yes" partnerLink="plParticipant" operation="SetParticipants" xmlns:tns="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Participants" portType="tns:ParticipantsPortType" variable="SetParticipantsIn"/>
+        <assign name="Assign1">
+            <copy>
+                <from>ns0:performCall($SetParticipantsIn.participantsReq)</from>
+                <to variable="SetParticipantsOut" part="participantsResp"/>
+            </copy>
+        </assign>
+        <reply name="Reply1" partnerLink="plParticipant" operation="SetParticipants" xmlns:tns="http://j2ee.netbeans.org/wsdl/bpCatissueESB/Participants" portType="tns:ParticipantsPortType" variable="SetParticipantsOut"/>
+    </sequence>
+</process>
+
