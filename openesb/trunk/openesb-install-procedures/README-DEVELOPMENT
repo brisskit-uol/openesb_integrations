@@ -1,0 +1,14 @@
+#===============================================================================#
+#  Command line tools for installing OpenESB with caCatissueESB                 #
+#===============================================================================#
+
+Inspect the POM.
+================
+
+Straightforward maven invocations are suffice...
+
+To build an artifact, the default install invocation is sufficient...
+mvn clean install
+
+To build and deploy an artifact...
+mvn clean deploy
