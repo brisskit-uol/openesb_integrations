@@ -1,0 +1,18 @@
+#===============================================================================#
+#  Command line tools for installing the OpenESB with caCatissueERSB            #
+#===============================================================================#
+
+QUICK START.
+============
+
+1. Unzip this package into the standard BRISSKit install directory 
+   (ie: to /var/local/brisskit/openesb)
+2. Edit the set.sh file within the /var/local/brisskit/openesb/bin/global directory of the install package.
+   'Source' the set.sh file at the start of any shell session.
+   (There should be no need to do this as sudo or root)
+   Use "source ./set.sh" or ". ./set.sh" at the command line or within a composition script.
+   Remember, if you execute any script as sudo, then you must inherit the environment variables; eg:
+   > sudo -E ./1-acquisitions.sh job-20130214
+3  Review configuration settings within the config directory.
+4. The order of completion is by number within the procedures/bin/installs directory
+   Alternatively, use the composed script OPENESB_INSTALL_PROCS_HOME/compositions/install-all.sh 
