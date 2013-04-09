@@ -92,7 +92,7 @@ print_message "" $LOG_FILE
 print_message "Acquiring Catissue ESB..." $LOG_FILE
 print_message "DEBUG: $ACQUISITIONS/$DEPLOYED_ARTIFACT" $LOG_FILE
 print_message "DEBUG: $BRISSKIT_CATISSUE_ESB_DOWNLOAD_PATH" $LOG_FILE
-wget wget --user=$MVN_DEPLOY_USER \
+wget --user=$MVN_DEPLOY_USER \
      --password=$MVN_DEPLOY_PASSWORD \
      -O $ACQUISITIONS/$DEPLOYED_ARTIFACT $BRISSKIT_CATISSUE_ESB_DOWNLOAD_PATH
 exit_if_bad $? "Failed to acquire Catissue ESB." $LOG_FILE
