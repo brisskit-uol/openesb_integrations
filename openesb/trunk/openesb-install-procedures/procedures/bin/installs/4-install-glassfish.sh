@@ -82,14 +82,14 @@ echo ""
 
 GLASSFISH_INSTALL_DIRECTORY_NAME=$( basename $GLASSFISH_DOWNLOAD_PATH .zip )
 #
-# Unzip tomcat file...
+# Unzip glassfish file...
 print_message "" $LOG_FILE
 print_message "Unzipping Glassfish..." $LOG_FILE
 unzip -o $WORK_DIR/$ACQUISITIONS_DIRECTORY/$( basename $GLASSFISH_DOWNLOAD_PATH .zip ) -d $OPENESB_INSTALL_DIRECTORY >>$LOG_FILE 2>>$LOG_FILE
 exit_if_bad $? "Failed to install Glassfish" $LOG_FILE
 
 #
-# Create a symbolic link to tomcat...
+# Create a symbolic link to glassfish...
 ln -s $OPENESB_INSTALL_DIRECTORY/$DEPLOYED_GLASSFISH_DIRECTORY_NAME $OPENESB_INSTALL_DIRECTORY/glassfish
 
 
