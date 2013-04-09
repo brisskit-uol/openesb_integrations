@@ -12,8 +12,8 @@ export JOB_LOG_NAME=job.log
 export ACQUISITIONS_DIRECTORY=acquisitions
 
 # We need a user and password for wget to maven repo
-export MVN_DEPLOY_USER=deployment
-export MVN_DEPLOY_PASSWORD=deploy.....
+export MVN_READONLY_USER=readonly
+export MVN_READONLY_PASSWORD=readonly.....
 
 # Download paths of installable artifacts... 
 export JDK_DOWNLOAD_PATH=http://maven.brisskit.org/nexus/content/repositories/thirdparty/oracle/jdk/jdk/7u17-linux/jdk-7u17-linux-x64.tar.gz

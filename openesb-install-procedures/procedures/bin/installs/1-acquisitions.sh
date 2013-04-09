@@ -74,16 +74,16 @@ print_message "About to acquire prerequisite files for OpenESB install" $LOG_FIL
 print_message "" $LOG_FILE
 print_message "Acquiring Java JDK..." $LOG_FILE
 
-wget --user=$MVN_DEPLOY_USER \
-     --password=$MVN_DEPLOY_PASSWORD \
+wget --user=$MVN_READONLY_USER \
+     --password=$MVN_READONLY_PASSWORD \
      -O $ACQUISITIONS/$( basename $JDK_DOWNLOAD_PATH ) $JDK_DOWNLOAD_PATH
 exit_if_bad $? "Failed to acquire Java JDK." $LOG_FILE
 print_message "Success! Acquired Java JDK." $LOG_FILE
 
 print_message "" $LOG_FILE
 print_message "Acquiring Glassfish..." $LOG_FILE
-wget --user=$MVN_DEPLOY_USER \
-     --password=$MVN_DEPLOY_PASSWORD \
+wget --user=$MVN_READONLY_USER \
+     --password=$MVN_READONLY_PASSWORD \
      -O $ACQUISITIONS/$( basename $GLASSFISH_DOWNLOAD_PATH ) $GLASSFISH_DOWNLOAD_PATH
 exit_if_bad $? "Failed to acquire Glassfish." $LOG_FILE
 print_message "Success! Acquired Glassfish." $LOG_FILE
@@ -92,8 +92,8 @@ print_message "" $LOG_FILE
 print_message "Acquiring Catissue ESB..." $LOG_FILE
 print_message "DEBUG: $ACQUISITIONS/$DEPLOYED_ARTIFACT" $LOG_FILE
 print_message "DEBUG: $BRISSKIT_CATISSUE_ESB_DOWNLOAD_PATH" $LOG_FILE
-wget --user=$MVN_DEPLOY_USER \
-     --password=$MVN_DEPLOY_PASSWORD \
+wget --user=$MVN_READONLY_USER \
+     --password=$MVN_READONLY_PASSWORD \
      -O $ACQUISITIONS/$DEPLOYED_ARTIFACT $BRISSKIT_CATISSUE_ESB_DOWNLOAD_PATH
 exit_if_bad $? "Failed to acquire Catissue ESB." $LOG_FILE
 print_message "Success! Acquired Catissue ESB." $LOG_FILE
