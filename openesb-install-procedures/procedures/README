@@ -16,3 +16,11 @@ QUICK START.
 3  Review configuration settings within the config directory.
 4. The order of completion is by number within the procedures/bin/installs directory
    Alternatively, use the composed script OPENESB_INSTALL_PROCS_HOME/compositions/install-all.sh 
+   
+NOTE WELL.
+===========
+The default administrator and password on installation are:
+user:     admin
+password: admin.....
+
+That is, the password is 'admin' followed by 5 dots.
