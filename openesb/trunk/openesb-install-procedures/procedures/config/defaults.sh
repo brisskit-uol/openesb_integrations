@@ -23,10 +23,10 @@ export BRISSKIT_CATISSUE_ESB_DOWNLOAD_PATH=http://maven.brisskit.org/nexus/conte
 export JDK=jdk1.7.0_17
 
 # Deployed caCatissueESB artifact zip name...
-DEPLOYED_ARTIFACT=caCatissueESB.zip
+export DEPLOYED_ARTIFACT=caCatissueESB.zip
 
-#
-DEPLOYED_GLASSFISH_DIRECTORY_NAME=GlassFishESBv22
+# The directory name, once it has been unzipped...
+export DEPLOYED_GLASSFISH_DIRECTORY_NAME=GlassFishESBv22
 
 # Custom space for the install workspace (if required)
 # If not defined, defaults to OPENESB_INSTALL_PROCS_HOME/work
