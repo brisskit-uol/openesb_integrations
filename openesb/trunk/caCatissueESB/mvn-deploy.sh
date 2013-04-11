@@ -16,7 +16,7 @@ DEPLOY_JAR_ARTIFACT_URL=http://maven.brisskit.org/nexus/content/repositories/rel
 # Cleanup the local build and download the artifact...
 #===========================================================================
 rm ./build/bpCatissueESB.jar >/dev/null 2>/dev/null
-wget -O ./build/bpCatissueESB.jar ${DEPLOY_JAR_ARTIFACT_URL}
+wget --user=readonly --password=readonly..... -O ./build/bpCatissueESB.jar ${DEPLOY_JAR_ARTIFACT_URL}
 
 #===========================================================================
 # Do the remote maven deploy ...
