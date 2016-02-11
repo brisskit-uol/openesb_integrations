@@ -16,9 +16,9 @@ export MVN_READONLY_USER=readonly
 export MVN_READONLY_PASSWORD=readonly.....
 
 # Download paths of installable artifacts... 
-export JDK_DOWNLOAD_PATH=http://maven.brisskit.org/nexus/content/repositories/thirdparty/oracle/jdk/jdk/7u17-linux/jdk-7u17-linux-x64.tar.gz
-export GLASSFISH_DOWNLOAD_PATH=http://maven.brisskit.org/nexus/content/repositories/thirdparty/openesb/Brisskit-GlassFishESB/v22/Brisskit-GlassFishESB-v22.zip
-export BRISSKIT_CATISSUE_ESB_DOWNLOAD_PATH=http://maven.brisskit.org/nexus/content/repositories/releases/org/brisskit/app/openesb/caCatissueESB/1.0-RC1/caCatissueESB-1.0-RC1.zip
+export JDK_DOWNLOAD_PATH=http://maven.brisskit.le.ac.uk/nexus/content/repositories/thirdparty/oracle/jdk/jdk/7u17-linux/jdk-7u17-linux-x64.tar.gz
+export GLASSFISH_DOWNLOAD_PATH=http://maven.brisskit.le.ac.uk/nexus/content/repositories/thirdparty/openesb/Brisskit-GlassFishESB/v22/Brisskit-GlassFishESB-v22.zip
+export BRISSKIT_CATISSUE_ESB_DOWNLOAD_PATH=http://maven.brisskit.le.ac.uk/nexus/content/repositories/releases/org/brisskit/app/openesb/caCatissueESB/1.0-RC1/caCatissueESB-1.0-RC1.zip
 # JDK expanded directory name (and version)...
 export JDK=jdk1.7.0_17
 

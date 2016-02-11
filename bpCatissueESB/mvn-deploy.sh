@@ -11,7 +11,7 @@
 #==============================================================================================
 # You must edit this script and place the maven url to the latest connector artifact here...
 #==============================================================================================
-CONNECTOR_ARTIFACT_URL=http://maven.brisskit.org/nexus/content/repositories/releases/org/brisskit/app/openesb/catissueConnector/1.0-RC1/catissueConnector-1.0-RC1.jar
+CONNECTOR_ARTIFACT_URL=http://maven.brisskit.le.ac.uk/nexus/content/repositories/releases/org/brisskit/app/openesb/catissueConnector/1.0-RC1/catissueConnector-1.0-RC1.jar
 #===========================================================================
 # Cleanup the local build and download the artifact...
 #===========================================================================
